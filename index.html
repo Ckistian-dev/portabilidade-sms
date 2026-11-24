@@ -9,34 +9,107 @@
     window.location.replace("sms:7678?body=PORTABILIDADE");
   </script>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       margin: 0;
       padding: 20px;
+      background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 50%, #ecfeff 100%);
+      color: #0f172a;
+    }
+    .card {
+      width: 100%;
+      max-width: 380px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 32px 24px;
       text-align: center;
-      background-color: #f9fafb;
-      color: #111827;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .icon-wrap {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #0f172a;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+    .details {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 22px;
+      font-size: 13px;
+      color: #475569;
+    }
+    .details strong {
+      color: #0f172a;
     }
     .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 14px 24px;
-      background-color: #2563eb;
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: #ffffff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-weight: 600;
       font-size: 16px;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    }
+    .btn:active {
+      transform: translateY(0);
+    }
+    .hint {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
-  <p>Abrindo aplicativo de SMS...</p>
-  <a class="btn" href="sms:7678?body=PORTABILIDADE">Clique aqui para abrir o SMS</a>
+  <main class="card">
+    <div class="icon-wrap" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </div>
+    <h1>Abrindo aplicativo de SMS</h1>
+    <p class="subtitle">Estamos redirecionando você automaticamente para enviar a solicitação.</p>
+    <div class="details">
+      Número: <strong>7678</strong> &nbsp;•&nbsp; Mensagem: <strong>PORTABILIDADE</strong>
+    </div>
+    <a class="btn" href="sms:7678?body=PORTABILIDADE">Clique aqui para abrir o SMS</a>
+    <p class="hint">Se não abrir sozinho, toque no botão acima.</p>
+  </main>
 </body>
 </html>
